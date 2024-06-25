@@ -1,10 +1,28 @@
 function aveSpd(upTime, upSpd, downSpd) {
-  // your code here
+  // Convert upTime from minutes to hours
+  let upTimeHours = upTime / 60;
+
+  // Calculate the uphill distance
+  let upDistance = upSpd * upTimeHours;
+
+  // Calculate the downhill time in hours
+  let downTimeHours = upDistance / downSpd;
+
+  // Calculate the total distance (uphill + downhill)
+  let totalDistance = upDistance + upDistance;
+
+  // Calculate the total time (uphill time + downhill time)
+  let totalTimeHours = upTimeHours + downTimeHours;
+
+  // Calculate the average speed
+  let averageSpeed = totalDistance / totalTimeHours;
+
+  return averageSpeed;
 }
 
 // Do not change the code below
-const upTime = prompt("Enter upTime: ");
-const downTime = prompt("Enter downTime: ");
-const downSpd = prompt("Enter downSpd: ");
+const upTime = parseInt(prompt("Enter upTime: "), 10);
+const upSpd = parseInt(prompt("Enter upSpd: "), 10);
+const downSpd = parseInt(prompt("Enter downSpd: "), 10);
 
-alert(aveSpd(upTime, downTime, downSpd));
+alert(aveSpd(upTime, upSpd, downSpd));
